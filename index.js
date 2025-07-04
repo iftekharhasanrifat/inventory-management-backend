@@ -6,7 +6,7 @@ import categoryRoute from './routes/categoryRoute.js';
 import companyRoute from './routes/companyRoute.js';
 import itemRoute from './routes/itemRoute.js';
 import stockInRoute from './routes/StockInRoute.js';
-import stockOutRoute from './routes/StockOutRoute.js';
+import stockOutRoute from './routes/stockOutRoute.js';
 import authRouter from './routes/authRoute.js';
 import adminRouter from './routes/adminsRoute.js'
 const app = express();
