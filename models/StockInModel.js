@@ -1,0 +1,51 @@
+import mongoose from "mongoose";
+const stockinSchema = mongoose.Schema(
+    {
+        Name:{
+            type:String,
+            required:true,
+            lowercase:true,
+        },
+        ItemId:{
+            type:String,
+            required:true,
+        },
+        Category:{
+            type:String,
+            required:true
+        },
+        Company:{
+            type:String,
+            required:true
+        },
+        Quantity:{
+            type:Number,
+            required:true
+        },
+        PricePerUnit:{
+            type:Number,
+            required:true
+        },
+        
+        LabourCostPerUnit:{
+            type:Number,
+            required:true
+        },
+        TotalCost:{
+            type:Number,
+            required:true
+        },
+        FinalPrice:{
+            type:Number,
+            required:true
+        },
+        Date:{
+            type:String,
+            required:true
+        },
+    },
+    {
+        timestamps:true
+    }
+)
+export const StockIn = mongoose.model('StockIn_log', stockinSchema);

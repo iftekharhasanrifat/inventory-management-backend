@@ -1,0 +1,59 @@
+import mongoose from "mongoose";
+const stockoutSchema = mongoose.Schema(
+    {
+        Name:{
+            type:String,
+            required:true,
+            lowercase:true,
+        },
+        Category:{
+            type:String,
+            required:true
+        },
+        Company:{
+            type:String,
+            required:true
+        },
+        Quantity:{
+            type:Number,
+            required:true
+        },
+        BuyingPricePerUnit:{
+            type:Number,
+            required:true
+        },
+        SellingPricePerUnit:{
+            type:Number,
+            required:true
+        },
+        
+        LabourCostPerUnit:{
+            type:Number,
+            required:true
+        },
+        Hospitality:{
+            type:Number,
+            required:false
+        },
+        Profit:{
+            type:Number,
+            required:true
+        },
+        Date:{
+            type:String,
+            required:true
+        },
+        ClientName:{
+            type:String,
+            required:true
+        },
+        ClientPhone:{
+            type:String,
+            required:false
+        },
+    },
+    {
+        timestamps:true
+    }
+)
+export const StockOut = mongoose.model('StockOut', stockoutSchema);
