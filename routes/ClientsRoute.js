@@ -1,6 +1,7 @@
 import express from 'express';
 import {Client} from '../models/ClientModel.js';
 import {ClientLedger} from '../models/ClientLedger.js';
+import {StockOut} from '../models/StockOutModel.js';
 
 const router = express.Router();
 
@@ -66,7 +67,7 @@ router.delete('/:id', async (req, res) => {
 
     // Delete all ledger entries for this client
     await ClientLedger.deleteMany({ clientId: client._id });
-
+    await StockOut.deleteMany({ ClientPhone: client.phone });
     await client.deleteOne();
     res.status(200).json({ message: 'Client deleted successfully' });
   } catch (error) {
