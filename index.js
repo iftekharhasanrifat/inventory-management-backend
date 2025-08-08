@@ -9,6 +9,7 @@ import stockInRoute from './routes/StockInRoute.js';
 import stockOutRoute from './routes/stockOutRoute.js';
 import authRouter from './routes/authRoute.js';
 import adminRouter from './routes/adminsRoute.js'
+import clientRoute from './routes/ClientsRoute.js';
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -20,6 +21,7 @@ app.use('/stockin', stockInRoute);
 app.use('/stockout', stockOutRoute);
 app.use('/admins', adminRouter)
 app.use('/auth',authRouter)
+app.use('/clients', clientRoute);
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });
