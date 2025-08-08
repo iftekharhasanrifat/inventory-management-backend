@@ -1,7 +1,7 @@
 import express from 'express';
 import {Client} from '../models/ClientModel.js';
 import {ClientLedger} from '../models/ClientLedger.js';
-import {StockOut} from '../models/StockOutModel.js';
+import {StockOut} from '../models/StockoutModel.js';
 
 const router = express.Router();
 
